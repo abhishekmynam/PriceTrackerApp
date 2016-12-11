@@ -5,17 +5,17 @@
 "use strict";
 
 
-var gulp = require('gulp');
-var connect = require('gulp-connect'); //Runs local dev server
-var open = require('gulp-open'); //open url in a web browser
-var browserify = require('browserify');//bundle js
-var reactify = require('reactify');// converts react js to normal js
-var source = require('vinyl-source-stream');// use conventional text stream with gulp
-var concat = require('gulp-concat');//concatenate files
-var lint = require('gulp-eslint');//lint js and jsx files, maintain quality of code we are writing
+let gulp = require('gulp');
+let connect = require('gulp-connect'); //Runs local dev server
+let open = require('gulp-open'); //open url in a web browser
+let browserify = require('browserify');//bundle js
+let reactify = require('reactify');// converts react js to normal js
+let source = require('vinyl-source-stream');// use conventional text stream with gulp
+let concat = require('gulp-concat');//concatenate files
+let lint = require('gulp-eslint');//lint js and jsx files, maintain quality of code we are writing
 
 
-var config={
+let config={
     port:9005,
     devBaseUrl:'http://localhost',
     paths:{
