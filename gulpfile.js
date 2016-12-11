@@ -69,7 +69,7 @@ gulp.task('css',function(){
         .pipe(concat('bundle.css'))
         .pipe(gulp.dest(config.paths.dist+'/css'));
 });
-/*
+
 gulp.task('images',function(){
     gulp.src(config.paths.images)
         .pipe(gulp.dest(config.paths.dist+'/images'))
@@ -78,7 +78,7 @@ gulp.task('images',function(){
     gulp.src('./src/favicon.ico')
         .pipe(gulp.dest(config.paths.dist));
 });
-*/
+
 gulp.task('lint',function(){
     return gulp.src(config.paths.js)
         .pipe(lint({configFile: 'eslint.config.json'}))
@@ -92,4 +92,4 @@ gulp.task('watch',function(){
 
 //gulp.task('default',['html', 'js', 'images','css','lint','open','watch']); //list of tasks to run just by starting gulp without any parameters ir task names
 
-gulp.task('default',['html','open','watch', 'js', 'css']);
+gulp.task('default',['html','open','watch', 'js', 'css', 'lint']);
